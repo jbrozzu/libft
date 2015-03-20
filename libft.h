@@ -6,7 +6,7 @@
 /*   By: jbrozzu <jbrozzu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 11:05:59 by jbrozzu           #+#    #+#             */
-/*   Updated: 2015/03/17 18:59:38 by jbrozzu          ###   ########.fr       */
+/*   Updated: 2015/03/20 15:44:09 by jbrozzu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,6 @@ void				ft_inter(char *s1, char *s2);
 char				**ft_alloc_tab(int line, int col);
 int					ft_hiddenp(char *s1, char *s2);
 char				*ft_strndup(const char *s, size_t n);
+int					ft_is_space(char c);
 
 #endif

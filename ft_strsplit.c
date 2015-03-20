@@ -6,7 +6,7 @@
 /*   By: jbrozzu <jbrozzu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/13 16:21:49 by jbrozzu           #+#    #+#             */
-/*   Updated: 2014/11/21 19:18:30 by jbrozzu          ###   ########.fr       */
+/*   Updated: 2015/03/20 16:40:14 by jbrozzu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ char			**ft_strsplit(char const *s, char c)
 	size_t	k;
 	size_t	*l;
 
+	tab = NULL;
 	j = 0;
 	k = 0;
 	l = &k;
@@ -75,6 +76,6 @@ char			**ft_strsplit(char const *s, char c)
 		tab[j] = ft_copy_word(s, l, c);
 		j++;
 	}
-	tab[j] = '\0';
+	tab[j] = NULL;
 	return (tab);
 }

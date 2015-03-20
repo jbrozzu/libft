@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_set_tab.c                                       :+:      :+:    :+:   */
+/*   ft_is_space.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbrozzu <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/11 18:30:32 by jbrozzu           #+#    #+#             */
-/*   Updated: 2015/03/20 15:34:08 by jbrozzu          ###   ########.fr       */
+/*   Created: 2015/03/20 15:41:02 by jbrozzu           #+#    #+#             */
+/*   Updated: 2015/03/20 15:44:45 by jbrozzu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_alloc_tab(int line, int col)
+int		ft_is_space(char c)
 {
-	int		i;
-	char	**tab;
-
-	i = 0;
-	tab = malloc(sizeof(char *) * (line));
-	if (!tab)
-		return (NULL);
-	while (i < (line))
-	{
-		tab[i] = malloc(sizeof(char) * (col + 1));
-		if (!tab[i])
-			return (NULL);
-		i++;
-	}
-	return (tab);
+	if (c == '\t' || c == ' ')
+		return (1);
+	return (0);
 }
